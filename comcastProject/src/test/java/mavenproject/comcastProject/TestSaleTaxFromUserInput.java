@@ -22,7 +22,7 @@ public class TestSaleTaxFromUserInput {
 			if(iNoItems <= 0)
 				System.out.println("Error! Zero or Negative value entered..");
 			else{
-
+ 
 				int[] arItem = new int[iNoItems];
 				Double[] arItemCo = new Double[iNoItems];
 				int iCho;
