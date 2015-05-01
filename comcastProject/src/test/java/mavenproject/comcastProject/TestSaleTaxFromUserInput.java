@@ -22,7 +22,7 @@ public class TestSaleTaxFromUserInput {
 			if(iNoItems <= 0)
 				System.out.println("Error! Zero or Negative value entered..");
 			else{
- 
+  
 				int[] arItem = new int[iNoItems];
 				Double[] arItemCo = new Double[iNoItems];
 				int iCho;
@@ -32,9 +32,9 @@ public class TestSaleTaxFromUserInput {
 					System.out.println("Enter the cost of item no " + (i+1) + " in cents");
 					arItem[i] = in.nextInt();
 
-					int iflag = 0;
+					boolean iflag = false;
 
-					while(iflag == 0){
+					while(!iflag){
 						System.out.println("Please tell if this item is luxury or a necessary.");
 						System.out.println("Enter 1 - For luxury item");
 						System.out.println("Enter 2 - For Necessary item");
@@ -42,10 +42,10 @@ public class TestSaleTaxFromUserInput {
 
 						if(iCho == 1){
 							arItemCo[i] = saleTaxCalculator.calculateTotalPrice(1000, ItemType.LUXURY, 1);
-							iflag = 1;
+							iflag = true; 
 						}else if(iCho == 2){
 							arItemCo[i] = saleTaxCalculator.calculateTotalPrice(1000, ItemType.BASIC, 1);
-							iflag = 1;
+							iflag = true; 
 						}else{
 							System.out.println("Invalid input! Please enter either 1 or 2");
 						}						
