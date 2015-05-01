@@ -1,0 +1,19 @@
+package comcastProgram;
+
+import java.util.Scanner;
+
+public class CalculateTax {
+
+	public static void main(String[] args) {
+		CalculateTotalCost tax = new CalculateTotalCost();
+		tax.calculateTaxPrice(4000);
+
+	}
+	
+	public void calculateTaxPrice(int priceForTax){
+		System.out.println("Tax calculator:");
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter ");
+	}
+
+}

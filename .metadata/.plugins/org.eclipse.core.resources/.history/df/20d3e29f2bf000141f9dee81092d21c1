@@ -1,0 +1,49 @@
+package comcastProgram;
+
+import java.util.Scanner;
+
+public class CalculateTotalCost {
+
+	public static void main(String[] args) {
+		CalculateTotalCost tax = new CalculateTotalCost();
+		tax.calculateTaxPrice(4000);
+	}
+
+	public void calculateTaxPrice(int priceForTax){
+		Scanner input = new Scanner( System.in );
+		Items theItem = new Items();
+
+		int number;
+		String Name = "";
+
+		System.out.print("How many items are to be put into inventory count?:  ");
+		number = input.nextInt();
+		input.nextLine();
+
+		Items[]inv = new Items[number];
+
+
+		for(int count = 0; count < inv.length; ++count)
+		{
+			System.out.print("\nWhat is item " +(count +1) + "'s name?:  ");
+			Name = input.nextLine();
+			theItem.setName(Name);
+
+			System.out.print("Enter " + Name + "'s product number:  ");
+			double pNumber = input.nextDouble();
+			theItem.setpNumber(pNumber);
+
+			System.out.print("How many " + Name + "s are there in inventory?:  ");
+			double Units = input.nextDouble();
+			theItem.setUnits(Units);
+
+			System.out.print(Name + "'s cost: ");
+			double Price = input.nextDouble();
+			theItem.setPrice (Price);
+
+			inv[count] = new Items(Name, Price, Units, pNumber);
+			input.nextLine();		
+		}
+
+	}
+}

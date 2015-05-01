@@ -1,0 +1,54 @@
+package windowHandleExample;
+
+public class AutoDeskPrograms {
+
+	public static void main(String[] args) {
+		AutoDeskPrograms ap = new AutoDeskPrograms();
+		ap.factorialExample(5);
+		ap.fibonacciExample(10);
+		ap.doReverse("This is Namrata");
+	}
+	
+	public void factorialExample(int n){
+		int total =1;
+		for(int i=n; i>=1; i--){
+			total = total * i;
+		}
+		System.out.println("Factorial of "+n+" is : "+total);
+	}
+	
+	public void fibonacciExample(int num){
+		System.out.println("Fibonacci Series : ");
+		int first =0;
+		int second =1;
+		int total = 1;
+		for(int i=1;i<=num; i++){
+			System.out.print(first+" ");
+			total = first + second;
+			first = second;
+			second = total;
+		}
+		
+		System.out.println("\nUsing Array :");
+		int[] array = new int[num];
+		array[0]=0;
+		array[1]=1;
+		System.out.print(array[0]+" ");
+		System.out.print(array[1]+" ");
+		for(int i=2;i<num;i++){
+			array[i]=array[i-2]+array[i-1];
+			System.out.print(array[i]+" ");
+		}
+	}
+	
+	public void doReverse(String input){
+		int length = input.length();
+		for(int i=length; i>0; i--){
+			System.out.println(input.charAt(i));
+		}
+	}
+	
+	public void countOfDuplicates(){
+		
+	}
+}

@@ -1,0 +1,46 @@
+package Group.Artifact;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+
+public class HomePage extends WebPage {
+	public void openHomePage(){
+		driver.manage().window().maximize();
+		driver.get("http://www.kayak.com/flights");
+	}
+
+	public void selectType(String name){
+		if(name.equalsIgnoreCase("Round-trip")){
+			driver.findElement(By.xpath("//span[@id='flightSearchTypes']/label/span")).click();
+		}
+		else if(name.equalsIgnoreCase("One-way")){
+			driver.findElement(By.xpath("//span[@id='flightSearchTypes']/label[2]/span")).click();
+		}
+		else if(name.equalsIgnoreCase("Multi-city"))
+		{
+			driver.findElement(By.xpath("//span[@id='flightSearchTypes']/label[3]/span")).click();
+		}
+	}
+	
+	public void enterValidDetails(String origin, String dest){
+		driver.findElement(By.xpath("//input[@id='origin']")).clear();
+		driver.findElement(By.xpath("//input[@id='origin']")).sendKeys(origin);
+		driver.findElement(By.xpath("//input[@id='destination']")).sendKeys(dest);
+	}
+	public void selectDate() throws InterruptedException{
+		driver.findElement(By.xpath("//div[@id='travel_dates-start-wrapper']")).click();
+		driver.findElement(By.xpath("//div[@id='travel_dates-start-wrapper']")).sendKeys("03/18/2015");
+	}
+	public void enterPassangerInfo(){
+		Select dropdown = new Select(driver.findElement(By.xpath("//div[@id='travelers']/a")));
+		dropdown.selectByVisibleText("");
+	}
+	public void searchButton(){
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+	}
+	public String threeDaysBefore(){
+		
+		return threeDaysBefore;
+	}
+	
+}

@@ -1,0 +1,38 @@
+package windowHandleExample;
+
+public class AutoDeskPrograms {
+
+	public static void main(String[] args) {
+		AutoDeskPrograms ap = new AutoDeskPrograms();
+		ap.factorialExample(5);
+		ap.fibonacciExample(5);
+	}
+	
+	public void factorialExample(int n){
+		int total =1;
+		for(int i=n; i>=1; i--){
+			total = total * i;
+		}
+		System.out.println("Factorial Total : "+total);
+	}
+	
+	public void fibonacciExample(int num){
+		int first =0;
+		int second =1;
+		int total = 1;
+		for(int i=1;i<=num; i++){
+			System.out.println(first);
+			total = first + second;
+			first = second;
+			second = total;
+		}
+	}
+	
+	public void doReverse(){
+		
+	}
+	
+	public void countOfDuplicates(){
+		
+	}
+}

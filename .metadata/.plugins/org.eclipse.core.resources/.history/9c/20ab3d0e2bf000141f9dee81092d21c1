@@ -1,0 +1,31 @@
+package comcastProgram;
+
+import java.util.Scanner;
+
+public class CalculateTotalCost {
+
+	public static void main(String[] args) {
+		CalculateTotalCost tax = new CalculateTotalCost();
+		tax.calculateTaxPrice(4000);
+	}
+
+	public void calculateTaxPrice(int priceForTax){
+		System.out.println("Tax calculator:");
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter how many items you want to buy :");
+		int totalNoOfItems = scan.nextInt();
+		int itemTotal = 0;
+		for(int i=0; i<totalNoOfItems; i++){
+			System.out.println("Please enter item name : ");
+			String itemName = scan.nextLine();
+			System.out.println("Please enter price : ");
+			int itemPrice = scan.nextInt();
+			System.out.println("Please enter quantity : ");
+			int itemQuantity = scan.nextInt();
+			
+			itemTotal= itemPrice * itemQuantity;
+			System.out.println(itemTotal);	
+		}
+
+	}
+}

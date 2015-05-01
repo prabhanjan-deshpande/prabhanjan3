@@ -1,0 +1,37 @@
+package comcastProgram;
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+public class SaleTaxCalculator{
+
+	public enum ItemType {BASIC, LUXURY};
+	public static void main(String []args){
+
+
+
+		SaleTaxCalculator saleTaxCalculator = new SaleTaxCalculator();
+	}
+
+	public void calculateTotalPrice(int basePrice,  ItemType itemType){
+		Double taxPercent;
+
+		switch (itemType) {
+		case BASIC:
+			taxPercent = 1;
+			break;
+		case LUXURY:
+			taxPercent = 9;
+			break;
+		}
+		Double tax = basePrice * 0.09;
+		Double TotalPrice = basePrice + basePrice;
+
+
+
+
+
+	}
+}

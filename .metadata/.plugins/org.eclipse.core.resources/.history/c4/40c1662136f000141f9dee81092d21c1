@@ -1,0 +1,26 @@
+package mavenproject.comcastProject;
+
+import org.testng.Assert;
+
+import mavenproject.comcastProject.SaleTaxCalculator.ItemType;
+
+import org.testng.annotations.Test;
+
+public class TestSaleTax {
+	
+	SaleTaxCalculator saleTaxCalculator = new SaleTaxCalculator();
+	
+	
+  @Test
+  public void testSaleTaxForBasicItem() {
+	  Double finalPrice = saleTaxCalculator.calculateTotalPrice(1000, ItemType.BASIC, 1);
+	  Assert.assertEquals(finalPrice, 1010);  
+  }
+  
+  @Test
+  public void testSaleTaxForLuxuryItem() {
+	  Double finalPrice = saleTaxCalculator.calculateTotalPrice(1000, ItemType.BASIC, 1);
+	  Assert.assertEquals(finalPrice, 1090);  
+  }
+  
+}

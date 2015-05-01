@@ -1,0 +1,18 @@
+package program;
+
+public class fibbonacciSeries {
+
+	public static void main(String[] args) {
+		fibbonacciSeries fs = new fibbonacciSeries();
+		fs.fibonnacci(0, 1);
+
+	}
+	public void fibonnacci(int a, int b){
+		System.out.print(a+ " " + b);
+		int sum = a+b; 
+		System.out.print(" "+sum);
+		a=b;
+		b=sum;
+	}
+
+}

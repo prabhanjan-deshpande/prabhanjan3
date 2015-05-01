@@ -1,0 +1,13 @@
+package program;
+
+public class fibbonacciSeries {
+
+	public static void main(String[] args) {
+		
+
+	}
+	public void fibonnacci(int a, int b){
+		System.out.println(a+ " " + b);
+	}
+
+}

@@ -1,0 +1,15 @@
+package comcastProgram;
+
+public class CalculateTax {
+
+	public static void main(String[] args) {
+		CalculateTax tax = new CalculateTax();
+		tax.calculateTaxPrice();
+
+	}
+	
+	public void calculateTaxPrice(){
+		
+	}
+
+}
